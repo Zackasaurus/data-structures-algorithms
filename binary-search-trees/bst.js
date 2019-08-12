@@ -17,7 +17,7 @@ class Tree {
     this.root.visit();
   }
   search(val) {
-    this.root.search(val);
+    return this.root.search(val);
   }
 }
 
@@ -47,12 +47,16 @@ class Node {
   // Search
   search(val) {
     if (this.value == val) {
-      console.log('found ' + val);
+      return this;
+      // return this;
+      // console.log(val);
+      // console.log('found ' + val);
     } else if (val < this.value && this.left != null) {
-      this.left.search(val);
+      return this.left.search(val);
     } else if (val > this.value && this.right != null) {
-      this.right.search(val);
+      return this.right.search(val);
     }
+    return null;
   }
   // Visit
   visit() {
