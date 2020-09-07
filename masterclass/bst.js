@@ -1,3 +1,5 @@
+const util = require("util");
+
 class Node {
   constructor(value) {
     this.value = value;
@@ -9,11 +11,38 @@ class BST {
   constructor() {
     this.root = null;
   }
-  insert(node) {
-    this.root = this.root ?? node;
-    return this.root;
+  insertR(val) {
+    const newNode = new Node(val);
+    // edge case
+    if (this.root === null) {
+      this.root = newNode;
+      return;
+    }
+    const recurse = (parent) => {
+      if (newNode.value < parent.value) {
+        return parent.left === null
+          ? (parent.left = newNode)
+          : recurse(parent.left);
+      } else {
+        return parent.right === null
+          ? (parent.right = newNode)
+          : recurse(parent.right);
+      }
+    };
+    recurse(this.root);
+  }
+  insertI(node) {
+    if (this.root === null) {
+      this.root = node;
+    } else {
+      let current = this.root;
+    }
   }
 }
 const tree = new BST();
-tree.insert(new Node(5));
-console.log(tree);
+tree.insertR(5);
+tree.insertR(8);
+tree.insertR(3);
+tree.insertR(7);
+
+console.log(util.inspect(tree, false, null, true));
