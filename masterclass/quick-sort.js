@@ -21,7 +21,7 @@ const pivot = (arr, start = 0, end = arr.length - 1) => {
 };
 
 const quicksort = (arr, left = 0, right = arr.length - 1) => {
-  // non base case
+  // non base
   if (left < right) {
     let pivotIndex = pivot(arr, left, right);
     // left recursive

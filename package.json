@@ -1,0 +1,12 @@
+{
+  "name": "data-structures-algorithms",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com-Zackasaurus:Zackasaurus/data-structures-algorithms.git",
+  "author": "mc-zachbogard <66688501+mc-zachbogard@users.noreply.github.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.3"
+  }
+}
