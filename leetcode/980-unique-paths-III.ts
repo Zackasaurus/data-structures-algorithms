@@ -1,11 +1,25 @@
 function uniquePathsIII(grid: number[][]): number {
   /*
- basically match everything path permutations
+    basically match everything path permutations
 
-count the number of non obstacle nodes (0)
+    1) count the number of non obstacle nodes (0)
 
+    2) keep track of visited nodes
 
- do a dfs,
+    S 0 0
+    0 0 E
+
+    S 0 0 0 0
+    0 0 X 0 0
+    0 0 0 0 E
+
+    S E 0 0 0
+    0 0 0 0 0
+    0 0 0 0 X
+
+    do a dfs
+    if hit end and less than number of non obstacles, pick different direction.
+    if 
  */
   return 0;
 }

@@ -9,7 +9,6 @@ function findMaximumXORNaive(nums: number[]): number {
   return max;
 }
 
-// O(n ** 2)
 function findMaximumXOR(nums: number[]): number {
   let max = 0;
   for (let i = 0; i < nums.length; i++) {
